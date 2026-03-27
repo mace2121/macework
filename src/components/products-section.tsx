@@ -8,13 +8,13 @@ interface ProductCardProps {
   badge: string;
   href: string;
   category: string;
+  slug: string;
 }
 
-export function ProductCard({ title, description, badge, href, category }: ProductCardProps) {
+export function ProductCard({ title, description, badge, href, category, slug }: ProductCardProps) {
   return (
     <Link 
-      href={href} 
-      target="_blank"
+      href={`/products/${slug}`} 
       className="group relative flex flex-col h-full p-8 rounded-3xl bg-card border border-border hover:border-macework/50 transition-all duration-300 hover:shadow-2xl hover:shadow-macework/5 overflow-hidden"
     >
       <div className="absolute top-0 right-0 p-6 opacity-0 group-hover:opacity-100 transition-opacity">
