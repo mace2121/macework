@@ -62,7 +62,7 @@ export function Header() {
           >
             <div className="container flex items-center justify-between h-16 md:h-18">
               <Link href="/" className="flex items-center gap-2 z-50 group">
-                <span className="text-xl md:text-2xl font-bold tracking-tighter group-hover:opacity-80 transition-opacity">
+                <span className="text-xl md:text-2xl font-bold tracking-tighter group-hover:opacity-80 transition-opacity font-logo">
                   Macework<span className="text-macework">.</span>
                 </span>
               </Link>

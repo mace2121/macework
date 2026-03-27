@@ -47,7 +47,7 @@ export function Hero() {
           {/* Title */}
           <motion.h1 
             variants={item}
-            className="text-6xl md:text-8xl lg:text-9xl font-black tracking-tighter text-foreground mb-8 whitespace-pre-line leading-[0.9] text-gradient"
+            className="text-5xl font-black tracking-tighter text-foreground mb-8 whitespace-pre-line leading-[1.1] text-gradient"
           >
             {siteContent.hero.title.replace(/\n/g, ' ')}
           </motion.h1>
