@@ -1,57 +1,18 @@
 "use client";
 
 import { siteContent } from "@/content/site-content";
-import { Mail, Phone, MapPin, Send, MessageSquare } from "lucide-react";
-import { motion } from "framer-motion";
-import { InfiniteGrid } from "@/components/ui/the-infinite-grid";
+import { Mail, Phone, MapPin, MessageSquare } from "lucide-react";
+import { SubPageHeader } from "@/components/subpage-header";
 import { LeadForm } from "@/components/lead-form";
-
-const container = {
-  hidden: { opacity: 0 },
-  show: {
-    opacity: 1,
-    transition: {
-      staggerChildren: 0.1,
-    },
-  },
-};
-
-const item = {
-  hidden: { opacity: 0, y: 20 },
-  show: { opacity: 1, y: 0 },
-};
 
 export default function ContactPage() {
   return (
     <main className="min-h-screen">
-      <section className="relative pt-40 pb-20 overflow-hidden">
-        <div className="absolute inset-0 z-0">
-          <InfiniteGrid className="h-full opacity-30" />
-        </div>
-        
-        <div className="container relative z-10">
-          <motion.div 
-            variants={container}
-            initial="hidden"
-            animate="show"
-            className="max-w-4xl"
-          >
-            <motion.h1 
-              variants={item}
-              className="text-5xl font-black tracking-tighter mb-6 text-gradient"
-            >
-              Bize Ulaşın
-            </motion.h1>
-            <motion.p 
-              variants={item}
-              className="text-xl text-muted-foreground max-w-2xl mb-12"
-            >
-              Yeni bir fikriniz mi var? Ya da mevcut projenizi büyütmek mi istiyorsunuz? 
-              Kahve eşliğinde dijital stratejinizi konuşalım.
-            </motion.p>
-          </motion.div>
-        </div>
-      </section>
+      <SubPageHeader 
+        badge="İletişim"
+        title="Bize Ulaşın"
+        description="Fikrinizi ürüne dönüştürmek veya markanızı dijitalde büyütmek için ilk adımı atın. Kahve eşliğinde stratejinizi konuşalım."
+      />
 
       <section className="py-20 bg-background">
         <div className="container">

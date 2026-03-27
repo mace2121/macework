@@ -8,6 +8,7 @@ import Link from "next/link";
 const blogPosts = [
   {
     id: 1,
+    slug: "saas-ux-tasarimi",
     title: "SaaS Dünyasında UX Tasarımının Dönüşüm Oranlarına Etkisi",
     excerpt: "Neden bazı SaaS ürünleri milyonlarca kullanıcıya ulaşırken bazıları ilk ayda veda ediyor? Yanıt kullanıcı deneyiminde gizli.",
     date: "25 Mart 2026",
@@ -17,21 +18,13 @@ const blogPosts = [
   },
   {
     id: 2,
+    slug: "nextjs-16-gelecek",
     title: "Next.js 16 ile Geleceğin Web Uygulamalarını İnşa Etmek",
     excerpt: "Modern web geliştirme süreçlerinde performans ve SEO dengesi nasıl kurulur? Next.js'in yeni özelliklerini inceliyoruz.",
     date: "18 Mart 2026",
     author: "Macework Tech Team",
     category: "Teknoloji",
     readTime: "8 dk okuma"
-  },
-  {
-    id: 3,
-    title: "Yapay Zeka Destekli Pazarlama Otomasyonu: SociaMind Vakas",
-    excerpt: "Kendi ürünümüz olan SociaMind geliştirilirken karşılaştığımız teknik zorluklar ve AI'ın pazarlamadaki rolü.",
-    date: "10 Mart 2026",
-    author: "Ürün Geliştirme",
-    category: "Yapay Zeka",
-    readTime: "10 dk okuma"
   }
 ];
 
@@ -47,7 +40,7 @@ export default function BlogPage() {
           <motion.h1 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            className="text-5xl md:text-8xl font-black tracking-tighter mb-6 text-gradient"
+            className="text-5xl font-black tracking-tighter mb-6 text-gradient"
           >
             Blog & Haberler
           </motion.h1>
@@ -55,7 +48,7 @@ export default function BlogPage() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1 }}
-            className="text-xl text-muted-foreground mx-auto max-w-2xl"
+            className="text-lg text-muted-foreground mx-auto max-w-2xl"
           >
             Teknoloji, tasarım ve dijital ürün dünyasından güncel içerikler, vaka analizleri ve ajans günlüğümüz.
           </motion.p>
@@ -66,13 +59,10 @@ export default function BlogPage() {
         <div className="container">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {blogPosts.map((post, idx) => (
-              <motion.article
+              <Link
                 key={post.id}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: idx * 0.1 }}
-                className="group flex flex-col h-full bg-card border border-border p-8 rounded-[2.5rem] hover:border-macework/50 transition-all duration-300"
+                href={`/blog/${post.slug}`}
+                className="group flex flex-col h-full bg-card border border-border p-8 rounded-[2.5rem] hover:border-macework/50 transition-all duration-300 hover:shadow-2xl hover:shadow-macework/5"
               >
                 <div className="mb-auto">
                     <div className="flex items-center gap-4 mb-6">
@@ -98,12 +88,12 @@ export default function BlogPage() {
                                 <div className="text-[10px] text-muted-foreground">{post.date}</div>
                             </div>
                          </div>
-                         <div className="w-10 h-10 rounded-full bg-muted/50 border border-border flex items-center justify-center group-hover:bg-macework group-hover:text-white transition-all cursor-pointer">
+                         <div className="w-10 h-10 rounded-full bg-muted/50 border border-border flex items-center justify-center group-hover:bg-macework group-hover:text-white transition-all">
                             <ArrowRight className="w-4 h-4" />
                          </div>
                     </div>
                 </div>
-              </motion.article>
+              </Link>
             ))}
           </div>
         </div>

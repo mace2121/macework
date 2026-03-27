@@ -39,11 +39,11 @@ export function MegaMenu({ label }: { label: string }) {
       {/* Mega Menu Panel */}
       <div 
         className={cn(
-          "absolute left-1/2 -translate-x-1/2 top-full w-[800px] pt-4 transition-all duration-200",
+          "absolute left-1/2 -translate-x-1/2 top-full w-[1000px] pt-4 transition-all duration-200",
           isOpen ? "opacity-100 translate-y-0 visible" : "opacity-0 translate-y-2 invisible"
         )}
       >
-        <div className="bg-background border border-border rounded-2xl p-6 shadow-xl grid grid-cols-3 gap-8 relative overflow-hidden">
+        <div className="bg-background border border-border rounded-[2.5rem] p-10 shadow-xl grid grid-cols-3 gap-10 relative overflow-hidden">
           {siteContent.solutionsMegaMenu.columns.map((col, idx) => (
             <div key={idx} className="space-y-4">
               <h3 className="text-sm font-semibold text-foreground px-2">{col.title}</h3>

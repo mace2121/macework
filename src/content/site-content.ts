@@ -18,8 +18,8 @@ export const siteContent = {
     badge: "Yaratıcı Teknoloji Stüdyosu",
     title: "Sadece hizmet değil,\nbirlikte öne çıkan\nürünler geliştiriyoruz.",
     description: "Macework Creativ, ölçeklenebilir dijital altyapılar ve kendi inovatif SaaS ürünlerini tasarlayan, aynı vizyonu markanıza da taşıyan 360 derece teknoloji ajansıdır.",
-    primaryCta: { label: "Çözümleri İncele", href: "#solutions" },
-    secondaryCta: { label: "Ürünlere Göz At", href: "#products" },
+    primaryCta: { label: "Çözümleri İncele", href: "/#solutions" },
+    secondaryCta: { label: "Ürünlere Göz At", href: "/#products" },
   },
 
   products: {
@@ -78,19 +78,28 @@ export const siteContent = {
       {
         title: "Dijital Çözümler",
         items: [
-          { slug: "web-tasarim", title: "Web Tasarım", description: "Premium ve kullanıcı odaklı arayüzler", href: "#solutions", iconName: "layout" },
-          { slug: "kurumsal-kimlik", title: "Kurumsal Kimlik", description: "Modern ve akılda kalıcı marka vizyonu", href: "#solutions", iconName: "brush" },
-          { slug: "seo-stratejisi", title: "SEO Stratejisi", description: "Veri odaklı arama motoru optimizasyonu", href: "#solutions", iconName: "line-chart" },
-          { slug: "sosyal-medya", title: "Sosyal Medya", description: "Yaratıcı etkileşim ve iletişim", href: "#solutions", iconName: "share-2" },
+          { slug: "web-tasarim", title: "Web Tasarım", description: "Premium ve kullanıcı odaklı arayüzler", href: "/solutions/web-tasarim", iconName: "layout" },
+          { slug: "kurumsal-kimlik", title: "Kurumsal Kimlik", description: "Modern ve akılda kalıcı marka vizyonu", href: "/solutions/kurumsal-kimlik", iconName: "brush" },
+          { slug: "seo-stratejisi", title: "SEO Stratejisi", description: "Veri odaklı arama motoru optimizasyonu", href: "/solutions/seo-stratejisi", iconName: "line-chart" },
+          { slug: "sosyal-medya", title: "Sosyal Medya", description: "Yaratıcı etkileşim ve iletişim", href: "/solutions/sosyal-medya", iconName: "share-2" },
         ],
       },
       {
         title: "Teknoloji Çözümleri",
         items: [
-          { slug: "web-yazilim", title: "Web Yazılım", description: "Güvenli ve ölçeklenebilir altyapılar", href: "#solutions", iconName: "code" },
-          { slug: "e-ticaret", title: "E-Ticaret", description: "Dönüşüm odaklı online satış sistemleri", href: "#solutions", iconName: "shopping-bag" },
-          { slug: "api-integrasyonlari", title: "API Entegrasyonları", description: "Kusursuz sistem bağlantıları", href: "#solutions", iconName: "network" },
-          { slug: "saas-gelistirme", title: "SaaS Geliştirme", description: "Fikirden ürüne özel yazılım projeleri", href: "#solutions", iconName: "box" },
+          { slug: "web-yazilim", title: "Web Yazılım", description: "Güvenli ve ölçeklenebilir altyapılar", href: "/solutions/web-yazilim", iconName: "code" },
+          { slug: "e-ticaret", title: "E-Ticaret", description: "Dönüşüm odaklı online satış sistemleri", href: "/solutions/e-ticaret", iconName: "shopping-bag" },
+          { slug: "api-integrasyonlari", title: "API Entegrasyonları", description: "Kusursuz sistem bağlantıları", href: "/solutions/api-integrasyonlari", iconName: "network" },
+          { slug: "saas-gelistirme", title: "SaaS Geliştirme", description: "Fikirden ürüne özel yazılım projeleri", href: "/solutions/saas-gelistirme", iconName: "box" },
+        ],
+      },
+      {
+        title: "Ürünlerimiz",
+        items: [
+          { slug: "qrgetir", title: "Qrgetir.com", description: "Yeni nesil dijital menü", href: "/products/qrgetir", iconName: "smartphone" },
+          { slug: "carigetir", title: "Carigetir.com", description: "Akıllı bulut ön muhasebe", href: "/products/carigetir", iconName: "calculator" },
+          { slug: "sociamind", title: "SociaMind.app", description: "Yapay zeka asistanı", href: "/products/sociamind", iconName: "brain" },
+          { slug: "byoo", title: "byoo.pro", description: "Dijital kartvizit ve profil", href: "/products/byoo", iconName: "link" },
         ],
       },
     ],
@@ -110,16 +119,40 @@ export const siteContent = {
       features: ["Modern Stack Geliştirme", "Yüksek Performans", "API Tasarımı", "Veri Güvenliği"],
     },
     {
-        slug: "kurumsal-kimlik",
-        title: "Kurumsal Kimlik & Branding",
-        description: "Markanızın ruhunu yansıtan, profesyonel ve modern görsel kimlik tasarımı.",
-        features: ["Logo Tasarımı", "Marka Kitabı", "Kartvizit & Antetli Kağıt", "Renk Teorisi Deneyimi"],
+      slug: "kurumsal-kimlik",
+      title: "Kurumsal Kimlik & Branding",
+      description: "Markanızın ruhunu yansıtan, profesyonel ve modern görsel kimlik tasarımı.",
+      features: ["Logo Tasarımı", "Marka Kitabı", "Kartvizit & Antetli Kağıt", "Renk Teorisi Deneyimi"],
     },
     {
-        slug: "e-ticaret",
-        title: "E-Ticaret Çözümleri",
-        description: "Dönüşüm oranları optimize edilmiş, mobil uyumlu ve hızlı e-ticaret altyapıları.",
-        features: ["Shopify & Custom Entegrasyon", "Ödeme Sistemleri", "Stok Yönetimi", "SEO Odaklı Kategori Yapısı"],
+      slug: "e-ticaret",
+      title: "E-Ticaret Çözümleri",
+      description: "Dönüşüm oranları optimize edilmiş, mobil uyumlu ve hızlı e-ticaret altyapıları.",
+      features: ["Shopify & Custom Entegrasyon", "Ödeme Sistemleri", "Stok Yönetimi", "SEO Odaklı Kategori Yapısı"],
+    },
+    {
+      slug: "seo-stratejisi",
+      title: "SEO Stratejisi",
+      description: "Arama motorlarında görünürlüğünüzü artıracak veri odaklı optimizasyon süreçleri.",
+      features: ["Anahtar Kelime Analizi", "Teknik SEO", "İçerik Stratejisi", "Backlink Yönetimi"],
+    },
+    {
+      slug: "sosyal-medya",
+      title: "Sosyal Medya Yönetimi",
+      description: "Markanızın dijital sesini güçlendiren, etkileşim odaklı içerik ve topluluk yönetimi.",
+      features: ["İçerik Planlama", "Grafik Tasarım", "Reklam Yönetimi", "Moderasyon"],
+    },
+    {
+      slug: "api-integrasyonlari",
+      title: "API Entegrasyonları",
+      description: "Sistemleriniz arasında kusursuz ve güvenli veri akışı sağlayan modern entegrasyon çözümleri.",
+      features: ["3. Parti Servis Bağlantıları", "Custom API Geliştirme", "Veri Senkronizasyonu", "Webhook Yönetimi"],
+    },
+    {
+      slug: "saas-gelistirme",
+      title: "SaaS Geliştirme",
+      description: "Fikrinizi ölçeklenebilir ve sürdürülebilir bir yazılım ürününe dönüştüren uçtan uca geliştirme süreçleri.",
+      features: ["MVP Tasarımı", "Multi-tenant Mimari", "Ödeme Entegrasyonu", "Cloud Optimization"],
     }
   ],
 
@@ -212,7 +245,7 @@ export const siteContent = {
     sectionTitle: "Nasıl Çalışırız?",
     items: [
       { step: "01", title: "İhtiyaç Analizi", description: "Projeyi, hedeflerinizi ve vizyonunuzu en ince ayrıntısına kadar dinliyoruz." },
-      { step: "02", title: "Çözüm Tasarımı", description: "Size özel mimariyi, kullanıcı deneyimini ve ürün rotasını çiziyoruz." },
+      { step: "02", title: "Çözüm Tasarımı", description: "Size özel mimariyi, kullanici deneyimini ve ürün rotasını çiziyoruz." },
       { step: "03", title: "Geliştirme", description: "Modern teknolojilerle güvenilir, hızlı ve ölçeklenebilir ürününüzü inşa ediyoruz." },
       { step: "04", title: "Yayına Alma & Büyütme", description: "Projenizi sorunsuz şekilde yayına alıyor ve büyüme yolculuğunda yanınızda oluyoruz." },
     ],

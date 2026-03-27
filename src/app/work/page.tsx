@@ -37,13 +37,13 @@ export default function WorksPage() {
           >
             <motion.h1 
               variants={item}
-              className="text-5xl md:text-8xl font-black tracking-tighter mb-6 text-gradient"
+              className="text-5xl font-black tracking-tighter mb-6 text-gradient"
             >
               Neler Yaptık?
             </motion.h1>
             <motion.p 
               variants={item}
-              className="text-xl text-muted-foreground mx-auto max-w-2xl mb-12"
+              className="text-lg text-muted-foreground mx-auto max-w-2xl mb-12"
             >
               {siteContent.works.sectionTitle} - Dijitalde iz bırakan, problem çözen ve 
               binlerce kullanıcıya ulaşan projelerimizden bazıları.
@@ -56,17 +56,15 @@ export default function WorksPage() {
         <div className="container">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {siteContent.works.items.map((work) => (
-              <motion.div
+              <Link
                 key={work.id}
-                initial={{ opacity: 0, scale: 0.95 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
+                href={`/work/${work.slug}`}
                 className="group relative flex flex-col h-full bg-card border border-border p-8 rounded-3xl hover:border-macework/50 transition-all duration-300 hover:shadow-2xl hover:shadow-macework/5 overflow-hidden"
               >
                 <div className="mb-auto">
                     <div className="flex items-center justify-between mb-4">
-                        <span className="text-xs font-bold uppercase tracking-widest text-macework bg-macework/10 px-3 py-1 rounded-full">{work.year}</span>
-                        <span className="text-xs font-medium text-muted-foreground">{work.category}</span>
+                        <span className="text-[10px] font-bold uppercase tracking-widest text-macework bg-macework/10 px-3 py-1 rounded-full">{work.year}</span>
+                        <span className="text-[10px] font-medium text-muted-foreground">{work.category}</span>
                     </div>
                   
                     <h3 className="text-2xl font-bold text-foreground mb-3 group-hover:text-macework transition-colors">
@@ -84,16 +82,13 @@ export default function WorksPage() {
                     </div>
                 </div>
 
-                <Link 
-                    href={`/work/${work.slug}`}
-                    className="mt-4 flex items-center justify-between gap-2 text-sm font-bold text-foreground group/link"
-                >
+                <div className="mt-4 flex items-center justify-between gap-2 text-sm font-bold text-foreground group/link">
                     <span className="group-hover/link:underline underline-offset-4 decoration-macework/50">Detayları İncele</span>
-                    <div className="w-10 h-10 rounded-full bg-muted/50 border border-border flex items-center justify-center group-hover/link:bg-macework group-hover/link:text-white transition-all">
+                    <div className="w-10 h-10 rounded-full bg-muted/50 border border-border flex items-center justify-center group-hover/link:bg-macework group-hover:text-white transition-all">
                        <ArrowRight className="w-4 h-4" />
                     </div>
-                </Link>
-              </motion.div>
+                </div>
+              </Link>
             ))}
           </div>
 
