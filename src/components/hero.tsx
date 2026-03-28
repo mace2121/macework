@@ -25,7 +25,7 @@ const item = {
 
 export function Hero() {
   return (
-    <InfiniteGrid className="pt-52 pb-24 lg:pt-64 lg:pb-40 w-full min-h-screen flex flex-col justify-center">
+    <InfiniteGrid className="pt-52 pb-12 lg:pt-64 lg:pb-16 w-full flex flex-col justify-center">
       <div className="container relative z-10">
         <motion.div 
           variants={container}
@@ -84,7 +84,7 @@ export function Hero() {
           {/* Brands Slider */}
           <motion.div 
              variants={item}
-             className="mt-24 w-full max-w-4xl mx-auto overflow-hidden pause-marquee"
+             className="mt-12 w-full max-w-4xl mx-auto overflow-hidden pause-marquee"
           >
              <p className="text-[10px] font-bold uppercase tracking-[0.3em] text-muted-foreground/50 mb-10 text-center">
                REFERANSLARIMIZ & ÜRÜNLERİMİZ
