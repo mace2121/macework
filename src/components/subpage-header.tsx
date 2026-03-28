@@ -32,12 +32,12 @@ export function SubPageHeader({ badge, title, description, children, className }
               </span>
             )}
             
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-6 text-gradient leading-[1.1]">
+            <h1 className="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl mb-6 text-gradient leading-[1.1]">
               {title}
             </h1>
             
             {description && (
-              <p className="text-base md:text-lg text-muted-foreground font-normal max-w-2xl leading-relaxed">
+              <p className="text-xl text-muted-foreground max-w-2xl">
                 {description}
               </p>
             )}

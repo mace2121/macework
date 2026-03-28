@@ -20,7 +20,7 @@ export default function ContactPage() {
             {/* Contact Info */}
             <div className="lg:col-span-1 space-y-10">
               <div className="space-y-6">
-                <h3 className="text-xl font-bold border-b border-border pb-4">İletişim Bilgileri</h3>
+                <h3 className="scroll-m-20 text-2xl font-semibold tracking-tight border-b border-border pb-4">İletişim Bilgileri</h3>
                 
                 <div className="flex gap-4 group">
                   <div className="w-12 h-12 rounded-2xl bg-macework/10 flex items-center justify-center text-macework group-hover:scale-110 transition-transform">
@@ -63,7 +63,7 @@ export default function ContactPage() {
                 <div className="w-10 h-10 rounded-full bg-green-500/20 flex items-center justify-center text-green-500">
                    <MessageSquare className="w-5 h-5" />
                 </div>
-                <h4 className="font-bold text-lg leading-tight">Hızlı Cevap Garantisi</h4>
+                <h4 className="scroll-m-20 text-xl font-semibold tracking-tight leading-tight">Hızlı Cevap Garantisi</h4>
                 <p className="text-sm text-muted-foreground leading-relaxed">
                   Tüm başvurularınıza en geç 24 saat içerisinde uzman ekibimiz tarafından geri dönüş sağlanır.
                 </p>

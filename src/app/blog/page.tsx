@@ -40,7 +40,7 @@ export default function BlogPage() {
           <motion.h1 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            className="text-5xl font-black tracking-tighter mb-6 text-gradient"
+            className="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl mb-6 text-gradient"
           >
             Blog & Haberler
           </motion.h1>
@@ -48,7 +48,7 @@ export default function BlogPage() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1 }}
-            className="text-lg text-muted-foreground mx-auto max-w-2xl"
+            className="text-xl text-muted-foreground mx-auto max-w-2xl"
           >
             Teknoloji, tasarım ve dijital ürün dünyasından güncel içerikler, vaka analizleri ve ajans günlüğümüz.
           </motion.p>
@@ -70,7 +70,7 @@ export default function BlogPage() {
                         <span className="text-xs text-muted-foreground font-medium">{post.readTime}</span>
                     </div>
                   
-                    <h3 className="text-2xl font-bold text-foreground mb-4 group-hover:text-macework transition-colors leading-tight">
+                    <h3 className="text-2xl font-semibold tracking-tight text-foreground mb-4 group-hover:text-macework transition-colors leading-tight">
                         {post.title}
                     </h3>
                   

@@ -35,17 +35,17 @@ export default function WorkDetailPage() {
           <div className="max-w-6xl mx-auto grid lg:grid-cols-12 gap-16">
             <div className="lg:col-span-8 space-y-12">
                <div className="space-y-6">
-                 <h2 className="text-3xl font-bold flex items-center gap-3">
-                   <div className="w-2 h-8 rounded-full bg-macework" />
-                   Proje Hikayesi
-                 </h2>
-                 <p className="text-lg text-muted-foreground leading-relaxed">
+                 <h2 className="scroll-m-20 text-3xl font-semibold tracking-tight flex items-center gap-3">
+                    <div className="w-2 h-8 rounded-full bg-macework" />
+                    Proje Hikayesi
+                  </h2>
+                 <p className="text-xl text-muted-foreground">
                    {work.longDescription}
                  </p>
                </div>
 
                <div className="space-y-6">
-                 <h2 className="text-2xl font-bold flex items-center gap-3">
+                 <h2 className="scroll-m-20 text-2xl font-semibold tracking-tight flex items-center gap-3">
                    Teknoloji Yığını
                  </h2>
                  <div className="grid sm:grid-cols-2 gap-3">
@@ -61,7 +61,7 @@ export default function WorkDetailPage() {
 
             <div className="lg:col-span-4 select-none">
                <div className="p-8 rounded-3xl bg-card border border-border sticky top-32 space-y-8">
-                  <h3 className="text-xl font-bold">Proje Kartı</h3>
+                  <h3 className="scroll-m-20 text-xl font-semibold tracking-tight">Proje Kartı</h3>
                   <div className="space-y-4">
                      <div className="flex justify-between items-center py-2 border-b border-border/50">
                         <span className="text-muted-foreground text-sm font-medium">Müşteri</span>

@@ -38,9 +38,9 @@ export default function ProductDetailPage() {
           <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-16 items-center mb-32">
              <div className="space-y-12">
                 <div className="space-y-6">
-                   <h2 className="text-3xl font-extrabold tracking-tight">Ürün Nedir ve Ne İşe Yarar?</h2>
+                   <h2 className="scroll-m-20 text-3xl font-semibold tracking-tight">Ürün Nedir ve Ne İşe Yarar?</h2>
                    <div className="h-1.5 w-12 bg-macework rounded-full" />
-                   <p className="text-lg text-muted-foreground leading-relaxed">
+                   <p className="text-xl text-muted-foreground">
                       {product.longDescription}
                    </p>
                 </div>
@@ -55,7 +55,7 @@ export default function ProductDetailPage() {
                         className="flex items-center gap-3 p-4 rounded-xl bg-card border border-border/50"
                       >
                          <CheckCircle2 className="w-5 h-5 text-macework" />
-                         <span className="font-bold text-base">{feature}</span>
+                         <span className="text-base font-semibold tracking-tight">{feature}</span>
                       </motion.div>
                    ))}
                 </div>
@@ -79,7 +79,7 @@ export default function ProductDetailPage() {
           <div className="p-12 md:p-20 rounded-[3rem] bg-card border border-border relative overflow-hidden text-center max-w-5xl mx-auto shadow-2xl">
              <div className="absolute top-0 right-0 w-96 h-96 bg-primary/10 blur-[120px] -mr-48 -mt-48"></div>
              <div className="space-y-10 relative z-10">
-                 <h2 className="text-4xl md:text-5xl font-black tracking-tighter">Geleceğin Teknolojisini<br/>Bugün Deneyin</h2>
+                 <h2 className="scroll-m-20 text-3xl font-semibold tracking-tight md:text-4xl">Geleceğin Teknolojisini<br/>Bugün Deneyin</h2>
                  <p className="text-lg text-muted-foreground max-w-xl mx-auto font-medium">
                     Yüzlerce mutlu kullanıcı arasına katılın ve işinizi Macework'ün yenilikçi SaaS ürünleriyle bir adım öne taşıyın.
                  </p>

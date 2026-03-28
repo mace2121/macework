@@ -29,9 +29,9 @@ export default function SolutionDetailPage() {
           <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-16 items-start">
              <div className="space-y-12">
                 <div className="space-y-6">
-                   <h2 className="text-3xl font-extrabold tracking-tight">Neler Sunuyoruz?</h2>
+                   <h2 className="scroll-m-20 text-3xl font-semibold tracking-tight">Neler Sunuyoruz?</h2>
                    <div className="h-1.5 w-12 bg-macework rounded-full" />
-                   <p className="text-lg text-muted-foreground leading-relaxed">
+                   <p className="text-xl text-muted-foreground">
                       Sektörel standartların üzerinde, markanıza değer katan ve dönüşümü odağa alan profesyonel {solution.title} süreçleri.
                    </p>
                 </div>
@@ -48,7 +48,7 @@ export default function SolutionDetailPage() {
                          <div className="w-10 h-10 rounded-xl bg-macework/10 flex items-center justify-center text-macework group-hover:scale-110 transition-transform">
                             <CheckCircle2 className="w-5 h-5" />
                          </div>
-                         <span className="font-bold text-lg">{feature}</span>
+                         <span className="text-lg font-semibold tracking-tight">{feature}</span>
                       </motion.div>
                    ))}
                 </div>
@@ -56,7 +56,7 @@ export default function SolutionDetailPage() {
 
              <div className="p-10 rounded-[2.5rem] bg-card border border-border shadow-2xl relative overflow-hidden group space-y-10">
                 <div className="absolute top-0 right-0 w-64 h-64 bg-macework/5 blur-[80px] -mr-32 -mt-32"></div>
-                <h3 className="text-2xl font-bold tracking-tight">Sürecimiz Nasıl İşler?</h3>
+                <h3 className="scroll-m-20 text-2xl font-semibold tracking-tight">Sürecimiz Nasıl İşler?</h3>
                 <div className="space-y-6">
                    {[
                       { step: 1, label: "Keşif & Analiz", color: "bg-macework" },

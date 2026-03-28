@@ -37,13 +37,13 @@ export default function WorksPage() {
           >
             <motion.h1 
               variants={item}
-              className="text-5xl font-black tracking-tighter mb-6 text-gradient"
+              className="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl mb-6 text-gradient"
             >
               Neler Yaptık?
             </motion.h1>
             <motion.p 
               variants={item}
-              className="text-lg text-muted-foreground mx-auto max-w-2xl mb-12"
+              className="text-xl text-muted-foreground mx-auto max-w-2xl mb-12"
             >
               {siteContent.works.sectionTitle} - Dijitalde iz bırakan, problem çözen ve 
               binlerce kullanıcıya ulaşan projelerimizden bazıları.
@@ -67,7 +67,7 @@ export default function WorksPage() {
                         <span className="text-[10px] font-medium text-muted-foreground">{work.category}</span>
                     </div>
                   
-                    <h3 className="text-2xl font-bold text-foreground mb-3 group-hover:text-macework transition-colors">
+                    <h3 className="text-2xl font-semibold tracking-tight text-foreground mb-3 group-hover:text-macework transition-colors">
                         {work.title}
                     </h3>
                   
@@ -96,7 +96,7 @@ export default function WorksPage() {
           <div className="mt-32 p-12 rounded-[2.5rem] bg-card border border-border relative overflow-hidden text-center max-w-4xl mx-auto shadow-2xl">
              <div className="absolute top-0 right-0 w-64 h-64 bg-macework/10 blur-[100px] -mr-32 -mt-32"></div>
              <div className="relative z-10 space-y-8">
-                 <h2 className="text-3xl md:text-5xl font-black tracking-tighter">Sizin Projeniz de Burada Olmalı mı?</h2>
+                 <h2 className="scroll-m-20 text-3xl font-semibold tracking-tight md:text-4xl">Sizin Projeniz de Burada Olmalı mı?</h2>
                  <p className="text-lg text-muted-foreground max-w-xl mx-auto font-medium">
                      Markanız için en doğru teknoloji stratejisini belirleyelim ve birlikte dijitalin kurallarını yeniden yazalım.
                  </p>
