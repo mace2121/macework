@@ -8,7 +8,7 @@ import { Badge } from "./ui/badge"; // I'll create this or just use a span for n
 
 export function WorkSection() {
   return (
-    <section id="work" className="py-24 bg-background">
+    <section id="islerimiz" className="py-24 bg-background">
       <div className="container">
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-16">
           <div className="max-w-2xl space-y-4">
@@ -18,7 +18,7 @@ export function WorkSection() {
             </p>
           </div>
           <Link 
-            href="/work" 
+            href="/islerimiz" 
             className="group inline-flex items-center gap-2 text-sm font-semibold text-macework hover:underline transition-all"
           >
             Tüm Projeleri Gör
@@ -30,7 +30,7 @@ export function WorkSection() {
           {siteContent.works.items.map((work) => (
             <Link
               key={work.id}
-              href={`/work/${work.slug}`}
+              href={`/islerimiz/${work.slug}`}
               className="group h-full"
             >
               <Card className="h-full border-border/60 hover:border-macework/50 transition-all duration-300 rounded-xl overflow-hidden flex flex-col shadow-none hover:shadow-md">

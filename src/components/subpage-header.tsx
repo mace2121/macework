@@ -14,9 +14,10 @@ interface SubPageHeaderProps {
 
 export function SubPageHeader({ badge, title, description, children, className }: SubPageHeaderProps) {
   return (
-    <section className={cn("relative pt-32 pb-16 md:pt-40 md:pb-24 overflow-hidden border-b border-border bg-background/50", className)}>
+    <section className={cn("relative pt-32 pb-16 md:pt-40 md:pb-24 overflow-hidden border-b border-border/60", className)}>
       <div className="absolute inset-0 z-0">
-        <InfiniteGrid className="h-full opacity-30" />
+        <InfiniteGrid className="h-full w-full" />
+        <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-background to-transparent z-10" />
       </div>
       
       <div className="container relative z-10">

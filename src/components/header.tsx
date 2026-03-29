@@ -57,7 +57,7 @@ export function Header() {
               <div className="container h-full flex items-center justify-between px-6">
                 {/* Logo */}
                 <div className="flex-1 lg:flex-none">
-                  <Link href="/" className="flex items-center gap-2 group">
+                  <Link href="/" className="flex items-center gap-2 group notranslate" translate="no">
                     <span className="text-lg font-bold tracking-tighter">
                       Macework<span className="text-macework">.</span>
                     </span>

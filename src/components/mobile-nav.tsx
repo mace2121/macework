@@ -106,7 +106,7 @@ export function MobileNav({ isOpen, onOpenChange }: MobileNavProps) {
 
             {/* Footer */}
             <div className="p-8 border-t border-border/50">
-               <p className="text-[10px] text-muted-foreground font-medium">© 2026 Macework Creativ. Tüm hakları saklıdır.</p>
+               <p className="text-[10px] text-muted-foreground font-medium">{siteContent.footer.copyright}</p>
             </div>
           </motion.div>
         </div>

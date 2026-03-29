@@ -23,7 +23,7 @@ export function SolutionsSection() {
   const allSolutions = siteContent.solutionsMegaMenu.columns.flatMap(col => col.items);
 
   return (
-    <section id="solutions" className="py-24 bg-muted/30">
+    <section id="cozumler" className="py-24 bg-muted/30">
       <div className="container">
         <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
           <h2 className="text-3xl md:text-4xl font-bold tracking-tight">Kapsamlı Dijital Çözümler</h2>

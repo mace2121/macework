@@ -19,10 +19,10 @@ interface ProductCardProps {
 export function ProductCard({ title, description, badge, href, category, slug }: ProductCardProps) {
   return (
     <Link 
-      href={`/products/${slug}`} 
+      href={`/urunler/${slug}`} 
       className="group h-full"
     >
-      <Card className="h-full border-border/60 hover:border-macework/50 transition-all duration-300 rounded-xl overflow-hidden flex flex-col shadow-none hover:shadow-md">
+      <Card className="relative border bg-card text-card-foreground h-full border-border/60 hover:border-macework/50 transition-all duration-300 rounded-xl overflow-hidden flex flex-col shadow-none hover:shadow-md">
         <div className="absolute top-0 right-0 p-6 opacity-0 group-hover:opacity-100 transition-opacity">
           <ArrowUpRight className="w-5 h-5 text-macework" />
         </div>
@@ -32,7 +32,7 @@ export function ProductCard({ title, description, badge, href, category, slug }:
             <Badge variant="secondary" className="bg-macework/10 text-macework border-none text-[10px] uppercase tracking-widest px-2 shadow-none">
               {badge}
             </Badge>
-            <span className="text-[10px] font-medium text-muted-foreground uppercase tracking-wider">
+            <span className="text-[10px] font-medium text-muted-foreground uppercase tracking-wider group-hover:opacity-0 transition-opacity">
               {category}
             </span>
           </div>
@@ -60,7 +60,7 @@ export function ProductCard({ title, description, badge, href, category, slug }:
 
 export function ProductsSection() {
   return (
-    <section id="products" className="py-24 bg-background">
+    <section id="urunler" className="py-24 bg-background">
       <div className="container">
         <div className="max-w-3xl mx-auto mb-16 space-y-4 text-center">
           <h2 className="text-3xl md:text-4xl font-bold tracking-tight">

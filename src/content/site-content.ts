@@ -1,25 +1,24 @@
 export const siteContent = {
   header: {
     navigation: [
-      { label: "Anasayfa", href: "/" },
-      { label: "Çözümler", href: "#solutions" },
-      { label: "İşlerimiz", href: "/work" },
-      { label: "Hakkımızda", href: "/#about" },
+      { label: "Çözümler", href: "/#cozumler" },
+      { label: "İşlerimiz", href: "/islerimiz" },
+      { label: "Hakkımızda", href: "/hakkimizda" },
       { label: "Blog", href: "/blog" },
-      { label: "İletişim", href: "/contact" },
+      { label: "İletişim", href: "/iletisim" },
     ],
     cta: {
-      label: "Teklif Al",
-      href: "/contact",
+      label: "Şablonlar",
+      href: "/sablonlar",
     },
   },
 
   hero: {
     badge: "Yaratıcı Teknoloji Stüdyosu",
     title: "Sadece hizmet değil,\nbirlikte öne çıkan\nürünler geliştiriyoruz.",
-    description: "Macework Creativ, ölçeklenebilir dijital altyapılar ve kendi inovatif SaaS ürünlerini tasarlayan, aynı vizyonu markanıza da taşıyan 360 derece teknoloji ajansıdır.",
-    primaryCta: { label: "Çözümleri İncele", href: "/#solutions" },
-    secondaryCta: { label: "Ürünlere Göz At", href: "/#products" },
+    description: "Macework Creative, ölçeklenebilir dijital altyapılar ve kendi inovatif SaaS ürünlerini tasarlayan, aynı vizyonu markanıza da taşıyan 360 derece teknoloji ajansıdır.",
+    primaryCta: { label: "Çözümleri İncele", href: "/#cozumler" },
+    secondaryCta: { label: "Ürünlere Göz At", href: "/#urunler" },
   },
 
   products: {
@@ -72,34 +71,82 @@ export const siteContent = {
       },
     ],
   },
+  
+  templates: {
+    items: [
+      {
+        id: "t1",
+        title: "Restoran Pro",
+        category: "Restoran",
+        image: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=800",
+        href: "/urunler/qrgetir",
+      },
+      {
+        id: "t2",
+        title: "Eco-Shop",
+        category: "E-Ticaret",
+        image: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?q=80&w=800",
+        href: "/cozumler/e-ticaret",
+      },
+      {
+        id: "t3",
+        title: "Corporate Flow",
+        category: "Kurumsal",
+        image: "https://images.unsplash.com/photo-1497215728101-856f4ea42174?q=80&w=800",
+        href: "/cozumler/web-yazilim",
+      },
+      {
+        id: "t4",
+        title: "SaaS Analytics",
+        category: "SaaS",
+        image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=800",
+        href: "/cozumler/saas-gelistirme",
+      },
+      {
+        id: "t5",
+        title: "Creative Studio",
+        category: "Portföy",
+        image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=800",
+        href: "/islerimiz",
+      },
+      {
+       id: "t6",
+       title: "Real Estate Pro",
+       category: "Kurumsal",
+       image: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?q=80&w=800",
+       href: "/islerimiz/lux-estate",
+      }
+    ],
+    categories: ["Hepsi", "E-Ticaret", "Kurumsal", "SaaS", "Portföy", "Restoran"]
+  },
 
   solutionsMegaMenu: {
     columns: [
       {
         title: "Dijital Çözümler",
         items: [
-          { slug: "web-tasarim", title: "Web Tasarım", description: "Premium ve kullanıcı odaklı arayüzler", href: "/solutions/web-tasarim", iconName: "layout" },
-          { slug: "kurumsal-kimlik", title: "Kurumsal Kimlik", description: "Modern ve akılda kalıcı marka vizyonu", href: "/solutions/kurumsal-kimlik", iconName: "brush" },
-          { slug: "seo-stratejisi", title: "SEO Stratejisi", description: "Veri odaklı arama motoru optimizasyonu", href: "/solutions/seo-stratejisi", iconName: "line-chart" },
-          { slug: "sosyal-medya", title: "Sosyal Medya", description: "Yaratıcı etkileşim ve iletişim", href: "/solutions/sosyal-medya", iconName: "share-2" },
+          { slug: "web-tasarim", title: "Web Tasarım", description: "Premium ve kullanıcı odaklı arayüzler", href: "/cozumler/web-tasarim", iconName: "layout" },
+          { slug: "kurumsal-kimlik", title: "Kurumsal Kimlik", description: "Modern ve akılda kalıcı marka vizyonu", href: "/cozumler/kurumsal-kimlik", iconName: "brush" },
+          { slug: "seo-stratejisi", title: "SEO Stratejisi", description: "Veri odaklı arama motoru optimizasyonu", href: "/cozumler/seo-stratejisi", iconName: "line-chart" },
+          { slug: "sosyal-medya", title: "Sosyal Medya", description: "Yaratıcı etkileşim ve iletişim", href: "/cozumler/sosyal-medya", iconName: "share-2" },
         ],
       },
       {
         title: "Teknoloji Çözümleri",
         items: [
-          { slug: "web-yazilim", title: "Web Yazılım", description: "Güvenli ve ölçeklenebilir altyapılar", href: "/solutions/web-yazilim", iconName: "code" },
-          { slug: "e-ticaret", title: "E-Ticaret", description: "Dönüşüm odaklı online satış sistemleri", href: "/solutions/e-ticaret", iconName: "shopping-bag" },
-          { slug: "api-integrasyonlari", title: "API Entegrasyonları", description: "Kusursuz sistem bağlantıları", href: "/solutions/api-integrasyonlari", iconName: "network" },
-          { slug: "saas-gelistirme", title: "SaaS Geliştirme", description: "Fikirden ürüne özel yazılım projeleri", href: "/solutions/saas-gelistirme", iconName: "box" },
+          { slug: "web-yazilim", title: "Web Yazılım", description: "Güvenli ve ölçeklenebilir altyapılar", href: "/cozumler/web-yazilim", iconName: "code" },
+          { slug: "e-ticaret", title: "E-Ticaret", description: "Dönüşüm odaklı online satış sistemleri", href: "/cozumler/e-ticaret", iconName: "shopping-bag" },
+          { slug: "api-integrasyonlari", title: "API Entegrasyonları", description: "Kusursuz sistem bağlantıları", href: "/cozumler/api-integrasyonlari", iconName: "network" },
+          { slug: "saas-gelistirme", title: "SaaS Geliştirme", description: "Fikirden ürüne özel yazılım projeleri", href: "/cozumler/saas-gelistirme", iconName: "box" },
         ],
       },
       {
         title: "Ürünlerimiz",
         items: [
-          { slug: "qrgetir", title: "Qrgetir.com", description: "Yeni nesil dijital menü", href: "/products/qrgetir", iconName: "smartphone" },
-          { slug: "carigetir", title: "Carigetir.com", description: "Akıllı bulut ön muhasebe", href: "/products/carigetir", iconName: "calculator" },
-          { slug: "sociamind", title: "SociaMind.app", description: "Yapay zeka asistanı", href: "/products/sociamind", iconName: "brain" },
-          { slug: "byoo", title: "byoo.pro", description: "Dijital kartvizit ve profil", href: "/products/byoo", iconName: "link" },
+          { slug: "qrgetir", title: "Qrgetir.com", description: "Yeni nesil dijital menü", href: "/urunler/qrgetir", iconName: "smartphone" },
+          { slug: "carigetir", title: "Carigetir.com", description: "Akıllı bulut ön muhasebe", href: "/urunler/carigetir", iconName: "calculator" },
+          { slug: "sociamind", title: "SociaMind.app", description: "Yapay zeka asistanı", href: "/urunler/sociamind", iconName: "brain" },
+          { slug: "byoo", title: "byoo.pro", description: "Dijital kartvizit ve profil", href: "/urunler/byoo", iconName: "link" },
         ],
       },
     ],
@@ -201,30 +248,60 @@ export const siteContent = {
         id: "lux-estate",
         slug: "lux-estate",
         title: "Lux Estate Portal",
-        category: "Emlak Teknolojileri",
+        category: "Tasarım",
         description: "Yapay zeka tabanlı gayrimenkul değerleme ve listeleme platformu.",
         longDescription: "Lüks gayrimenkul pazarı için geliştirilen bu portal, veri analitiği ve 3D tur entegrasyonu ile sektörde fark yaratan bir platformdur.",
         technologies: ["Next.js", "Python AI", "Three.js", "MongoDB"],
-        year: "2025"
+        year: "2025",
+        gallery: [
+            "https://images.unsplash.com/photo-1560518883-ce09059eeffa?q=80&w=1200",
+            "https://images.unsplash.com/photo-1460317442991-0ec239f33649?q=80&w=1200",
+            "https://images.unsplash.com/photo-1582408921715-18e7806365c1?q=80&w=1200"
+        ]
       },
       {
         id: "global-logistics",
         slug: "global-logistics",
         title: "Global Lojistik Takip",
-        category: "Lojistik & Taşıma",
+        category: "Yazılım",
         description: "Uluslararası konteyner takip ve rota optimizasyon sistemi.",
         longDescription: "Gerçek zamanlı lokasyon takibi ve maliyet optimizasyonu algoritmalarıyla donatılmış modern lojistik yönetim yazılımı.",
         technologies: ["React Native", "Go", "PostgreSQL", "Google Maps API"],
-        year: "2024"
+        year: "2024",
+        gallery: [
+            "https://images.unsplash.com/photo-1586528116311-ad86d7c7ce80?q=80&w=1200",
+            "https://images.unsplash.com/photo-1594818379496-da1e345b0ded?q=80&w=1200",
+            "https://images.unsplash.com/photo-1578575437130-527eed3abbec?q=80&w=1200"
+        ]
       },
       {
         id: "health-hub",
         slug: "health-hub",
         title: "HealthHub Pro",
-        category: "Sağlık Yazılımları",
+        category: "Yazılım",
         description: "Özel klinikler için randevu ve hasta takip otomasyonu.",
         longDescription: "Doktor ve hastalar arasındaki iletişimi dijitalleştiren, online konsültasyon ve randevu takip modülleri içeren kapsamlı sağlık platformu.",
         technologies: ["React", "FastAPI", "Redis", "Supabase"],
+        year: "2025"
+      },
+      {
+        id: "eco-style",
+        slug: "eco-style",
+        title: "Eco Style Branding",
+        category: "Branding",
+        description: "Sürdürülebilir moda markası için kapsamlı marka kimliği çalışması.",
+        longDescription: "Doğa dostu tekstil üreticisi için logo, kurumsal kimlik ve dijital varlık tasarımı.",
+        technologies: ["Adobe CC", "Figma", "Branding Strategy"],
+        year: "2024"
+      },
+      {
+        id: "smart-marketing",
+        slug: "smart-marketing",
+        title: "Smart Marketing Ads",
+        category: "Pazarlama",
+        description: "E-ticaret siteleri için yeni nesil reklam yönetim ve optimizasyon paneli.",
+        longDescription: "Reklam harcamalarını optimize eden ve yatırım getirisini artıran akıllı pazarlama aracı.",
+        technologies: ["Node.js", "React", "Google Ads API"],
         year: "2025"
       }
     ]
@@ -234,7 +311,7 @@ export const siteContent = {
     sectionTitle: "Neden Macework?",
     sectionDescription: "Biz sıradan bir ajans değiliz. İhtiyaçlarınızı, ürün vizyonuyla ele alan yaratıcı teknoloji partneriniziz.",
     items: [
-      { title: "Ürün Odaklılık", description: "Problem çözen, son kullanıcıya hazır SaaS mantığında projeler teslim ederiz.", iconName: "layers" },
+      { title: "Ürün Odaklılık", description: "Problem çözen, son kullaniciya hazır SaaS mantığında projeler teslim ederiz.", iconName: "layers" },
       { title: "Ölçeklenebilir Mimari", description: "Büyüdükçe tıkanmayan, sağlam ve modern teknoloji yığınları kullanırız.", iconName: "server" },
       { title: "Hız ve Güven", description: "Taahhüt ettiğimiz kaliteyi, şeffaf süreçlerle zamanında canlıya alırız.", iconName: "zap" },
       { title: "Kreatif & Teknik Denge", description: "Hem mükemmel görünen hem de kusursuz çalışan hibrit yapılar inşa ederiz.", iconName: "palette" },
@@ -263,7 +340,27 @@ export const siteContent = {
   },
 
   footer: {
-    description: "Macework Creativ, yenilikçi dijital ürünler geliştiren ve kurumlar için yeni nesil teknoloji çözümleri üreten kreatif bir stüdyodur.",
-    copyright: "© 2026 Macework Creativ. Tüm hakları saklıdır."
+    description: "Macework Creative, yenilikçi dijital ürünler geliştiren ve kurumlar için yeni nesil teknoloji çözümleri üreten kreatif bir stüdyodur.",
+    copyright: "© 2026 Macework Creative. Tüm hakları saklıdır."
+  },
+  
+  about: {
+    title: "Biz Kimiz?",
+    subtitle: "Yaratıcılık ve teknolojinin kesişim noktasında, geleceği bugünden inşa ediyoruz.",
+    description: "Macework Creative, 2020 yılında dijital dünyada fark yaratmak isteyen markalara yenilikçi çözümler sunmak amacıyla kuruldu. Sadece bir yazılım ajansı değil, aynı zamanda kendi SaaS ürünlerini geliştiren bir teknoloji stüdyosuyuz.",
+    mission: "Misyonumuz, karmaşık teknolojik süreçleri sadeleştirerek markaların dijital potansiyellerini en üst düzeye çıkarmaktır.",
+    vision: "Vizyonumuz, küresel ölçekte ses getiren dijital ürünler tasarlayan lider bir kreatif teknoloji stüdyosu olmaktır.",
+    stats: [
+      { label: "Tamamlanan Proje", value: "150+" },
+      { label: "Mutlu Müşteri", value: "80+" },
+      { label: "Geliştirilen Ürün", value: "5+" },
+      { label: "Uzman Ekip", value: "12" }
+    ],
+    team: [
+      { name: "Yaser Köse", role: "Founder & Creative Director", image: "https://api.dicebear.com/7.x/avataaars/svg?seed=Yaser" },
+      { name: "Alican Demir", role: "CTO / Lead Developer", image: "https://api.dicebear.com/7.x/avataaars/svg?seed=Alican" },
+      { name: "Selin Yılmaz", role: "Senior UI/UX Designer", image: "https://api.dicebear.com/7.x/avataaars/svg?seed=Selin" },
+      { name: "Mert Aydın", role: "Backend Developer", image: "https://api.dicebear.com/7.x/avataaars/svg?seed=Mert" }
+    ]
   }
 };

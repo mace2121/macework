@@ -8,6 +8,13 @@ import { Input } from "./ui/input";
 import { Textarea } from "./ui/textarea";
 import { Label } from "./ui/label";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "./ui/card";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "./ui/select";
 
 export function LeadForm() {
   const [status, setStatus] = useState<"idle" | "submitting" | "success">("idle");
@@ -29,7 +36,7 @@ export function LeadForm() {
         </div>
         <CardTitle className="text-2xl font-bold">Mesajınız Alındı!</CardTitle>
         <CardDescription className="text-base">
-          Ekibimiz en kısa sürede sizinle iletişime geçecektir. Macework Creativ'e gösterdiğiniz ilgi için teşekkürler.
+          Ekibimiz en kısa sürede sizinle iletişime geçecektir. Macework Creative'e gösterdiğiniz ilgi için teşekkürler.
         </CardDescription>
         <Button 
           variant="link"
@@ -45,7 +52,7 @@ export function LeadForm() {
   return (
     <section id="lead" className="py-24">
       <div className="container">
-        <div className="max-w-4xl mx-auto">
+        <div className="w-full">
           <div className="text-center mb-16 space-y-2">
             <h2 className="text-3xl md:text-4xl font-bold tracking-tight">Yeni Bir Projeye Başlayalım</h2>
             <p className="text-lg text-muted-foreground">
@@ -53,7 +60,7 @@ export function LeadForm() {
             </p>
           </div>
 
-          <Card className="overflow-hidden relative border-border/60 shadow-xl">
+          <Card className="overflow-hidden relative border-border/60 shadow-none bg-card/30 backdrop-blur-sm rounded-[2.5rem]">
             <CardHeader className="pb-0">
                <div className="absolute top-0 right-0 w-64 h-64 bg-macework/5 blur-[80px] -mr-32 -mt-32 pointer-events-none"></div>
             </CardHeader>
@@ -92,16 +99,18 @@ export function LeadForm() {
 
                 <div className="space-y-2">
                   <Label htmlFor="interest">İlgilendiğiniz Alan</Label>
-                  <select 
-                    id="interest"
-                    className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
-                  >
-                    <option>SaaS Ürünleri</option>
-                    <option>Web Tasarım & Yazılım</option>
-                    <option>E-Ticaret</option>
-                    <option>Dijital Pazarlama</option>
-                    <option>Diger</option>
-                  </select>
+                  <Select name="interest" defaultValue="SaaS Ürünleri">
+                    <SelectTrigger id="interest" className="rounded-md">
+                      <SelectValue placeholder="Bir alan seçin" />
+                    </SelectTrigger>
+                    <SelectContent>
+                      <SelectItem value="SaaS Ürünleri">SaaS Ürünleri</SelectItem>
+                      <SelectItem value="Web Tasarım & Yazılım">Web Tasarım & Yazılım</SelectItem>
+                      <SelectItem value="E-Ticaret">E-Ticaret</SelectItem>
+                      <SelectItem value="Dijital Pazarlama">Dijital Pazarlama</SelectItem>
+                      <SelectItem value="Diger">Diğer</SelectItem>
+                    </SelectContent>
+                  </Select>
                 </div>
 
                 <div className="md:col-span-2 space-y-2">
@@ -118,7 +127,7 @@ export function LeadForm() {
                 <div className="md:col-span-2 pt-4">
                   <Button 
                     disabled={status === "submitting"}
-                    className="w-full h-12 font-bold bg-macework hover:bg-macework-hover text-white shadow-lg shadow-macework/10"
+                    className="w-full h-14 font-bold bg-macework hover:bg-macework-hover text-white shadow-none rounded-xl text-xs uppercase tracking-widest"
                   >
                     {status === "submitting" ? (
                       <div className="w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin"></div>

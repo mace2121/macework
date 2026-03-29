@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useRef } from "react";
+import React, { useRef, useId, useEffect, useState } from "react";
 import { cn } from "@/lib/utils";
 import { 
   motion, 
@@ -11,6 +11,12 @@ import {
 
 export const InfiniteGrid = ({ children, className }: { children?: React.ReactNode, className?: string }) => {
   const containerRef = useRef<HTMLDivElement>(null);
+  const patternId = useId();
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   const mouseX = useMotionValue(0);
   const mouseY = useMotionValue(0);
@@ -36,6 +42,12 @@ export const InfiniteGrid = ({ children, className }: { children?: React.ReactNo
 
   const maskImage = useMotionTemplate`radial-gradient(350px circle at ${mouseX}px ${mouseY}px, black, transparent)`;
 
+  if (!mounted) return (
+    <div className={cn("relative w-full overflow-hidden bg-background", className)}>
+        {children}
+    </div>
+  );
+
   return (
     <div
       ref={containerRef}
@@ -47,7 +59,7 @@ export const InfiniteGrid = ({ children, className }: { children?: React.ReactNo
     >
       {/* Static Background Grid */}
       <div className="absolute inset-0 z-0 opacity-[0.03] dark:opacity-[0.05]">
-        <GridPattern offsetX={gridOffsetX} offsetY={gridOffsetY} />
+        <GridPattern patternId={patternId} offsetX={gridOffsetX} offsetY={gridOffsetY} />
       </div>
       
       {/* Interactive Masked Grid */}
@@ -55,7 +67,7 @@ export const InfiniteGrid = ({ children, className }: { children?: React.ReactNo
         className="absolute inset-0 z-0 opacity-20 dark:opacity-40"
         style={{ maskImage, WebkitMaskImage: maskImage }}
       >
-        <GridPattern offsetX={gridOffsetX} offsetY={gridOffsetY} />
+        <GridPattern patternId={patternId} offsetX={gridOffsetX} offsetY={gridOffsetY} />
       </motion.div>
 
       {/* Decorative Orbs */}
@@ -71,12 +83,12 @@ export const InfiniteGrid = ({ children, className }: { children?: React.ReactNo
   );
 };
 
-const GridPattern = ({ offsetX, offsetY }: { offsetX: any, offsetY: any }) => {
+const GridPattern = ({ patternId, offsetX, offsetY }: { patternId: string, offsetX: any, offsetY: any }) => {
   return (
     <svg className="w-full h-full">
       <defs>
         <motion.pattern
-          id="grid-pattern"
+          id={patternId}
           width="40"
           height="40"
           patternUnits="userSpaceOnUse"
@@ -92,7 +104,7 @@ const GridPattern = ({ offsetX, offsetY }: { offsetX: any, offsetY: any }) => {
           />
         </motion.pattern>
       </defs>
-      <rect width="100%" height="100%" fill="url(#grid-pattern)" />
+      <rect width="100%" height="100%" fill={`url(#${patternId})`} />
     </svg>
   );
 };
